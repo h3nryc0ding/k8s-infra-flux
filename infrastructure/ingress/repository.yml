@@ -1,7 +1,7 @@
 apiVersion: source.toolkit.fluxcd.io/v1
 kind: HelmRepository
 metadata:
-  name: nginx-ingress-charts
+  name: ingress-nginx
   namespace: ingress-system
 spec:
   interval: 1m
