@@ -15,7 +15,7 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: prometheus
+                name: prometheus-server
                 port:
                   number: 80
   tls:
