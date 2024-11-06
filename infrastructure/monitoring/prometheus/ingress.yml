@@ -1,15 +1,24 @@
-apiVersion: traefik.io/v1alpha1
-kind: IngressRoute
+apiVersion: networking.k8s.io/v1
+kind: Ingress
 metadata:
   name: prometheus
   namespace: monitoring
+  annotations:
+   cert-manager.io/cluster-issuer: letsencrypt-staging
 spec:
-  entryPoints:
-    - web
-    - websecure
-  routes:
-    - match: Host(`prometheus.apps.k8splay.xyz`)
-      kind: Rule
-      services:
-        - name: prometheus-server
-          port: 80
+  ingressClassName: traefik
+  rules:
+    - host: prometheus.apps.k8splay.xyz
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: prometheus
+                port:
+                  number: 80
+  tls:
+    - hosts:
+       - prometheus.apps.k8splay.xyz
+      secretName: prometheus-tls
