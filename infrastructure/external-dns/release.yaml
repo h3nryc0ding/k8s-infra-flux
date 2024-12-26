@@ -1,0 +1,39 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: external-dns
+  namespace: external-dns
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: external-dns
+      version: "1.15.0"
+      sourceRef:
+        kind: HelmRepository
+        name: external-dns
+        namespace: external-dns
+      interval: 1m
+  values:
+    provider:
+      name: ovh
+    domainFilters:
+      - codehenry.de
+    sources:
+      - ingress
+    env:
+      - name: OVH_APPLICATION_KEY
+        valueFrom:
+          secretKeyRef:
+            name: ovh-api-credentials
+            key: OVH_APPLICATION_KEY
+      - name: OVH_APPLICATION_SECRET
+        valueFrom:
+          secretKeyRef:
+            name: ovh-api-credentials
+            key: OVH_APPLICATION_SECRET
+      - name: OVH_CONSUMER_KEY
+        valueFrom:
+          secretKeyRef:
+            name: ovh-api-credentials
+            key: OVH_CONSUMER_KEY

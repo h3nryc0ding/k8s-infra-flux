@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Secret
+metadata:
+  name: ovh-api-credentials
+  namespace: external-dns
+type: Opaque
+data:
+  OVH_APPLICATION_KEY: ENC[AES256_GCM,data:dYaLruKfahAP40cPBbKTjftYAGyofkKM,iv:oeyKQ65Flh1+5KqIqX3KHfUlKNE/GjGN272sCw8GnxE=,tag:TTjFD1+WuCHke9b3/75Igg==,type:str]
+  OVH_APPLICATION_SECRET: ENC[AES256_GCM,data:O6mi4Q39C2QaI/TCr5WM/PHfTYm5IPNQNG3y30k9L7Bh6IfJQu9OQIxe3gs=,iv:1hdBpBXUPBO78o/HDSS3WsQZT6tfnDGb/5/NmUUFG38=,tag:vvKEpBgPl8EnH0M/zbSLGQ==,type:str]
+  OVH_CONSUMER_KEY: ENC[AES256_GCM,data:Bem2spi0MFWhozp4oL8unrfiGtnKsJtCYgb8j6vjgkgtsqsMKZ/zIL08jYI=,iv:B1J2/A6iOk/gxVoBMymTGgjknftu2qGn4mVfr3yyjx0=,tag:rJbNerZPPCTJDutHO2pCiA==,type:str]
+sops:
+  kms: []
+  gcp_kms: []
+  azure_kv: []
+  hc_vault: []
+  age:
+    - recipient: age1sa224kdq8x9qvne5nhcgn074xtkcytvn9nje6sjm0rhs5p5lr59svncpgu
+      enc: |
+        -----BEGIN AGE ENCRYPTED FILE-----
+        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBWQjJjNDdoTHVyUENoK2c2
+        WjU5a0hDeGt5dUhmcmtEV3dpS0JXMzJHUTN3CmtDV1J1d1EzSnlxSFYzOXRLYVli
+        T0c1TE1sbHUySlhOTm50ZUlwbWJWMjAKLS0tIFZRcU53R3ZyM2NyUUJQWFhYVjlo
+        L1NCSVRLWHRCZzM3UkFtMzM0SG5KY00KwgEl3mcR8LUs6WWrFxkA9+AfiT7YGB+g
+        inbk5C5SNMzV7kyV9iYh3TF3RHAWZSmAwECjAQdXDqWsbDK+xpRKuA==
+        -----END AGE ENCRYPTED FILE-----
+  lastmodified: "2024-12-26T22:46:43Z"
+  mac: ENC[AES256_GCM,data:/9URrlXFt4kO+eEho+gzlikFrKDP1UH9MNPTAVz5wEbTH19pODHZxMyEhUHHnei1NXmi7NwSj7GecTQvNnCqNFVu+D4c9nRJu0Ppt80aJ+n51iVwX65ZA1vMALESPnyZsUbahrsKnmD1Oulx/7eYjE2st0k82t5VS0r21aPocJ8=,iv:V8YYYBlsudQ+px0UyGGf3zV20pOuMwrkneCEpZoQx1s=,tag:iUMF9irzAx/EpnYvArrTVg==,type:str]
+  pgp: []
+  encrypted_regex: ^(data|stringData)$
+  version: 3.9.2
