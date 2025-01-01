@@ -1,0 +1,28 @@
+apiVersion: helm.toolkit.fluxcd.io/v2
+kind: HelmRelease
+metadata:
+  name: openebs
+  namespace: openebs
+spec:
+  interval: 5m
+  chart:
+    spec:
+      chart: openebs
+      version: "4.1.0"
+      sourceRef:
+        kind: HelmRepository
+        name: openebs
+        namespace: openebs
+      interval: 1m
+  values:
+    engines:
+      local:
+        lvm:
+          enabled: false
+        zfs:
+          enabled: false
+    mayastor:
+      csi:
+        node:
+          initContainers:
+            enabled: false
