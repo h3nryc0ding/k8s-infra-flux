@@ -21,8 +21,6 @@ spec:
           enabled: false
         zfs:
           enabled: false
-    mayastor:
-      csi:
-        node:
-          initContainers:
-            enabled: false
+      replicated:
+        mayastor:
+          enabled: false
