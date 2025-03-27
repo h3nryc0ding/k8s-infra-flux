@@ -22,6 +22,8 @@ spec:
     sources:
       - ingress
     policy: sync
+    extraArgs:
+      - --default-targets=141.147.26.197
     env:
       - name: OVH_APPLICATION_KEY
         valueFrom:
