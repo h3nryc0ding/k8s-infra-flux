@@ -21,6 +21,7 @@ spec:
       - codehenry.de
     sources:
       - ingress
+    policy: sync
     env:
       - name: OVH_APPLICATION_KEY
         valueFrom:
