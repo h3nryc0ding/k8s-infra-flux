@@ -4,10 +4,10 @@ metadata:
   name: ovh-api-credentials
   namespace: external-dns
 type: Opaque
-data:
-  OVH_APPLICATION_KEY: ENC[AES256_GCM,data:A9pPa8ZYHzIDPvz9x6/4ShXJqII6C8OT,iv:qQ0632AicDYTaYmZxVXMv4nDNlHmONsMHXBZCUJOBa8=,tag:nIk6lweAl+/XBA0V0QEsrQ==,type:str]
-  OVH_APPLICATION_SECRET: ENC[AES256_GCM,data:iUIXy6p4QGTmBvqxA2YdolbXmSGN2rE9/Bx7xXZMyHiJNPdedocnO6uWZtE=,iv:MQmSKe9v1GekC8uKfmC16nJSoST5ROq8RBNRhRoqsMk=,tag:GOIWUOWiNz/pm16ATZtICQ==,type:str]
-  OVH_CONSUMER_KEY: ENC[AES256_GCM,data:WlUfPVilM1QcGIkVMBG4zESwk8ZoGiNb1iQDQZpaj2z/CKKsr0ukHUvLKZQ=,iv:VHb/U+pCLR2hp8qneF+WfvRkmDxdlTo0XyerdtV2YaI=,tag:rFPj8ufblQxxhpDWeq6CQg==,type:str]
+stringData:
+  OVH_APPLICATION_KEY: ENC[AES256_GCM,data:ByQBYgCZOEfKRONHsClyzw==,iv:immU9i2KrO+m72w/aJZjPWZPZ0GvbSc2qOliXZasFaM=,tag:7ScI/fiGOBuub+WZ0PuUWg==,type:str]
+  OVH_APPLICATION_SECRET: ENC[AES256_GCM,data:0mWUFJZnNwB1MORS834sdjtc2+/k4zxE1Ff8QzekCXQ=,iv:5EMca3VXdzdB0Sg0PpNEUD6RL065SCoTdUF7mwwx36I=,tag:S1FfxDb4lNelclZQj49mvQ==,type:str]
+  OVH_CONSUMER_KEY: ENC[AES256_GCM,data:5VUnVXqXPBfKndjvvVl9p9P9T20Xc+aL9SKlXk1oGvs=,iv:lZW5YPe07XsJ4dsqNp/4KXvHmW7fQ3XOfACZrVmIlsM=,tag:+i4P4vE32V1ly483yIgovA==,type:str]
 sops:
   kms: []
   gcp_kms: []
@@ -17,14 +17,14 @@ sops:
     - recipient: age1sa224kdq8x9qvne5nhcgn074xtkcytvn9nje6sjm0rhs5p5lr59svncpgu
       enc: |
         -----BEGIN AGE ENCRYPTED FILE-----
-        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBWQjJjNDdoTHVyUENoK2c2
-        WjU5a0hDeGt5dUhmcmtEV3dpS0JXMzJHUTN3CmtDV1J1d1EzSnlxSFYzOXRLYVli
-        T0c1TE1sbHUySlhOTm50ZUlwbWJWMjAKLS0tIFZRcU53R3ZyM2NyUUJQWFhYVjlo
-        L1NCSVRLWHRCZzM3UkFtMzM0SG5KY00KwgEl3mcR8LUs6WWrFxkA9+AfiT7YGB+g
-        inbk5C5SNMzV7kyV9iYh3TF3RHAWZSmAwECjAQdXDqWsbDK+xpRKuA==
+        YWdlLWVuY3J5cHRpb24ub3JnL3YxCi0+IFgyNTUxOSBmWjdpam5RRlBLMStpZDMv
+        YktxdmxsK2pSaVJibjBJVGhRdjE5S1R0enlvCkhPYlpRZTkyNVhCZXllSlViUDQw
+        Znlud01oSm1ZRDFUSUlpOVY4Nm93SnMKLS0tIGsrV2MrbU5ZY2FxcmlMb2dONU1i
+        c1lyTElCSXk5ZWJTNHZialVsUm5YMUUKgJ6D4Y9lfG3vKljn1QVr9Kxq64m+X8Jl
+        zRM+XGJeN6gqETRN95D//tRmMn688ZWN2s/DFRPHhPT5xIhycXTI1w==
         -----END AGE ENCRYPTED FILE-----
-  lastmodified: "2025-03-27T13:17:18Z"
-  mac: ENC[AES256_GCM,data:iW9iX8ZPoHaqz/s3/Xv1dPJkyXeQeq8XfBU7xxx4tug10a4DxqQ7ELnP1ibh/GCVP/awICjhYpw/pVCjRSuiLQpyi6Oa76G6yvPkUNHDZErY5sQFPVyseZAuSqPtQI5mLGTEay+wIKHVT7UFIqFt+36ROF38RcxfkpgWeY5PbkQ=,iv:edMhSNlkG/5Q0ey/w1yUICPTSno9Vf9bEh3SHg30kTg=,tag:X6GOmfE8f8Bq2yduNcOgVQ==,type:str]
+  lastmodified: "2025-03-27T14:25:23Z"
+  mac: ENC[AES256_GCM,data:zbCs6vOsprASk643BUF389DtM1wy2MYUlTcSMdx0+brjOnYtveUo5BQ3SOvuunvx/heApA5Ev23R1vfeIaC+0Wrf/dZPa7MTNOu3JduNQsCqzM6UTL+wtqFl+E0OYsm7b45DTnK0dRO9aEL8QXE3OljI8R06SCBTA9F17oiK6gs=,iv:mpj18l2n6Y30Mj3KjqXKm9I2K6hmUvFgTZ9pk5oEPmQ=,tag:pDTZII47dnebA4dU1FTsUQ==,type:str]
   pgp: []
   encrypted_regex: ^(data|stringData)$
   version: 3.9.4
