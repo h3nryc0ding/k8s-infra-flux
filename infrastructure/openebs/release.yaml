@@ -24,3 +24,6 @@ spec:
       replicated:
         mayastor:
           enabled: false
+    localpv-provisioner:
+      hostpathClass:
+        isDefaultClass: true
