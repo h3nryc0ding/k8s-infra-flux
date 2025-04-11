@@ -19,13 +19,13 @@ spec:
       service:
         type: ClusterIP
       ingress:
-        enabled: true
+        enable: true
         className: nginx
         host: coder.codehenry.de
         annotations:
           cert-manager.io/cluster-issuer: letsencrypt-production
         tls:
-          enabled: true
+          enable: true
           secretName: coder.codehenry.de-tls
       env:
         - name: CODER_ACCESS_URL
