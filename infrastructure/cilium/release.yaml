@@ -20,10 +20,7 @@ spec:
     hostFirewall:
       enabled: true
     hubble:
-      relay:
-        enabled: true
-      ui:
-        enabled: true
+      enabled: false
     kubeProxyReplacement: true
     securityContext:
       capabilities:
